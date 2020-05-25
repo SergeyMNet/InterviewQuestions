@@ -13,15 +13,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReverseEachWordInString", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CountCharacterInString", "CountCharacterInString\CountCharacterInString.csproj", "{ADC4A201-8820-459F-9356-464EE57B01B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoveDuplicateCharacters", "RemoveDuplicateCharacters\RemoveDuplicateCharacters.csproj", "{8BD4C8BA-017D-4F3B-BC75-5474D1E5D345}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RemoveDuplicateCharacters", "RemoveDuplicateCharacters\RemoveDuplicateCharacters.csproj", "{8BD4C8BA-017D-4F3B-BC75-5474D1E5D345}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmBubbleSort", "AlgorithmBubbleSort\AlgorithmBubbleSort.csproj", "{9C9DD7ED-4E59-4353-92F3-5A7E12BFE6BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlgorithmBubbleSort", "AlgorithmBubbleSort\AlgorithmBubbleSort.csproj", "{9C9DD7ED-4E59-4353-92F3-5A7E12BFE6BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmQuickSort", "AlgorithmQuickSort\AlgorithmQuickSort.csproj", "{81BE2810-BC28-4248-9CCF-4651C51F70C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlgorithmQuickSort", "AlgorithmQuickSort\AlgorithmQuickSort.csproj", "{81BE2810-BC28-4248-9CCF-4651C51F70C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmMergeSort", "AlgorithmMergeSort\AlgorithmMergeSort.csproj", "{43BD29E6-0961-4A98-A1F8-D0FDC74AF7B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlgorithmMergeSort", "AlgorithmMergeSort\AlgorithmMergeSort.csproj", "{43BD29E6-0961-4A98-A1F8-D0FDC74AF7B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmInsertionSort", "AlgorithmInsertionSort\AlgorithmInsertionSort.csproj", "{E3C427E6-3E63-4CF6-92C8-3A726317A9BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlgorithmInsertionSort", "AlgorithmInsertionSort\AlgorithmInsertionSort.csproj", "{E3C427E6-3E63-4CF6-92C8-3A726317A9BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllPosComb", "AllPosComb\AllPosComb.csproj", "{E120059C-472B-491B-A9D9-4D59A9FBC160}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{E3C427E6-3E63-4CF6-92C8-3A726317A9BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3C427E6-3E63-4CF6-92C8-3A726317A9BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3C427E6-3E63-4CF6-92C8-3A726317A9BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E120059C-472B-491B-A9D9-4D59A9FBC160}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E120059C-472B-491B-A9D9-4D59A9FBC160}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E120059C-472B-491B-A9D9-4D59A9FBC160}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E120059C-472B-491B-A9D9-4D59A9FBC160}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
