@@ -15,14 +15,20 @@ namespace AllPosComb
             //      Result: [["a"], ["a","b"], ["a","b","c"], ["a","c"], ["a","c","b"], ["b"], ["b","a"], ["b","a","c"], ["b","c"], ["b","c","a"], ["c"], ["c","a"], ["c","a","b"], ["c","b"], ["c","b","a"]]
 
             var arr = new string[] { "a", "b", "c" };
-
+            
             var tempDictionary = new Dictionary<string, string[]>();
+            
             DoSearch(arr, tempDictionary);
             string[][] result = MapResultArray(tempDictionary);
+            Console.WriteLine("Solution with loops");
             PrintResults(result);
+
+            var result2 = GetPermutations(arr);
+            Console.WriteLine("Solution with recursion");
+            PrintResults(result2);
         }
 
-        private static void PrintResults(string[][] result)
+        private static void PrintResults(IEnumerable<IEnumerable<string>> result)
         {
             foreach (var list in result)
             {
@@ -37,11 +43,11 @@ namespace AllPosComb
             {
                 tempList.Add(array.Where(item => !string.IsNullOrEmpty(item)).ToArray());
             }
-
             var result = tempList.ToArray();
             return result;
         }
-        
+
+
         private static void DoSearch(string[] arr, Dictionary<string, string[]> tempDictionary)
         {
             for (int i = 0; i < arr.Length; i++)
@@ -54,15 +60,15 @@ namespace AllPosComb
                         var tempK = arr[k];
                         if (arr[i] == arr[j])
                         {
-                            tempJ = "";
+                            tempJ = string.Empty;
                         }
                         if (arr[i] == arr[k])
                         {
-                            tempK = "";
+                            tempK = string.Empty;
                         }
                         if (arr[j] == arr[k])
                         {
-                            tempK = "";
+                            tempK = string.Empty;
                         }
 
                         var key = String.Concat(arr[i], tempJ, tempK);
@@ -74,5 +80,28 @@ namespace AllPosComb
                 }
             }
         }
+
+
+        // solution with recursion
+        private static IEnumerable<IEnumerable<T>> GetPermutations<T>(IEnumerable<T> items)
+        {
+            foreach (var item in items)
+            {
+                var itemAsEnumerable = Enumerable.Repeat(item, 1);
+                var subSet = items.Except(itemAsEnumerable);
+                if (!subSet.Any())
+                {
+                    yield return itemAsEnumerable;
+                }
+                else
+                {
+                    foreach (var sub in GetPermutations(items.Except(itemAsEnumerable)))
+                    {
+                        yield return itemAsEnumerable.Union(sub);
+                    }
+                }
+            }
+        }
+
     }
 }
